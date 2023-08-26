@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import developmentImage from '../assets/development.svg'
+import programmerImage from '../assets/programmer.svg'
 ---
 
 <Layout title="Lea Tinoso">
@@ -8,22 +8,24 @@ import developmentImage from '../assets/development.svg'
 		<div class="flex h-full">
 			<section class="flex w-3/5">
 				<div class="m-auto">
-					<h1 class="text-4xl font-bold">Hey, I'm Lea</h1>
-					<h2 class="text-2xl font-normal">a Full-Stack Software Engineer</h2>
-					<p class="text-gray-400 py-9">I mainly use Ruby on Rails, React.js &  Nest.js.</p>
+					<h1 class="text-6xl font-bold leading-normal">Hey, I'm <span class="text-pink-600">Lea</span></h1>
+					<h2 class="text-4xl font-normal">a <span class="text-pink-600">Full-Stack</span> Software Engineer</h2>
+					<p class="text-gray-400 my-9 text-lg">
+						I code backend with <span class="underline hover:text-white"><a href="https://rubyonrails.org/" target="_blank" rel="noopener noreferrer">Ruby on Rails</a></span> & <span class="underline hover:text-white"><a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest.js</a></span> and dive into <span class="underline hover:text-white"><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React.js</a></span> for the frontend.
+					</p>
 					<div>
 						<a href="https://app.luminpdf.com/viewer/64e0683f9cfc88c903663317" target="_blank" rel="noopener noreferrer">
-							<button class="bg-pink-600 hover:bg-pink-500 text-white py-2 px-4 rounded mr-8">View Cv</button>
+							<button class="bg-pink-600 hover:bg-pink-500 text-white py-2 px-4 rounded mr-8 text-lg">View Cv</button>
 						</a>
 						<a href="mailto:lxthym@icloud.com">
-							<button class="text-pink-600 hover:border-pink-500 border border-pink-600 py-2 px-4 rounded">Email</button>
+							<button class="text-pink-600 hover:border-pink-500 border border-pink-600 py-2 px-4 rounded text-lg">Email</button>
 						</a>
 					</div>
 				</div>
 			</section>
 			<section class="flex">
-				<div class="mt-auto ml-auto">
-					<img class="w-5/6" src={developmentImage}>
+				<div class="m-auto">
+					<img class="w-5/6" src={programmerImage}>
 				</div>
 			</section>
 		</div>
