@@ -191,6 +191,10 @@ main {
   display: block; /
 }
 
+.project-link {
+  margin-left: 5px;
+}
+
 /* Media Queries */
 @media screen and (max-width: 990px) {
   .welcome-section {
