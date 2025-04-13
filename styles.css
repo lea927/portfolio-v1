@@ -1,0 +1,205 @@
+/* Basic CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Set default font */
+  line-height: 1.5; /* Set line-height for readability */
+  font-size: var(--font-size-regular);
+  /* font-weight: var(--font-weight-regular); */
+  color: var(--text-color);
+}
+
+ol, ul {
+  list-style: none; /* Remove list styles */
+}
+
+a {
+  text-decoration: none; /* Remove underlines from links */
+  color: inherit; /* Make links inherit the text color */
+}
+
+img {
+  max-width: 100%; /* Prevent images from overflowing their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+table {
+  border-collapse: collapse; /* Collapse table borders */
+  width: 100%; /* Make tables take full width */
+}
+
+button, input, textarea {
+  border: none; /* Remove default borders */
+  background: none; /* Remove default backgrounds */
+  font-family: inherit; /* Inherit font from parent */
+  font-size: inherit; /* Inherit font size */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Optional: Set a default background color */
+html {
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+
+.welcome-section {
+  height: 100vh;
+}
+
+/* ============================================= */
+/* Declare color palette using CSS variables */
+:root {
+  /* Primary colors */
+  --primary-color: rgb(0, 0, 0); /* Blue */
+  --secondary-color: #2ecc71; /* Green */
+  --accent-color: #e74c3c; /* Red */
+
+  /* Neutral colors */
+  --background-color: rgb(252, 249, 249); /* Light gray */
+  --background-color-secondary: rgb(237,	234,	242); /* Light gray */
+  --text-color: var(--primary-color); /* Dark gray for text */
+  --border-color: #dcdcdc; /* Light border gray */
+
+  /* Additional colors */
+  --link-color: var(--text-color); /* Blue for links */
+
+  /* Font sizes/weight */
+  --font-size-regular: 18px;
+  --font-size-medium: 24px;
+  --font-weight-regular: 400px;
+
+  --font-size-h1: 39.246px;
+  --font-size-h2: 37.98.246px;
+  --font-weight-large: 550px;
+
+  --nav-gap: 30px;
+}
+
+/* ============================================= */
+/* Section by section design */
+/* Reusable design */
+.block-span {
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 50px;
+  padding: 10px;
+}
+
+/* Section by section design */
+/* 1. Navbar */
+header {
+  justify-content: space-between;
+  height: 60px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgb(197, 197, 197),
+      /* var(--background-color-secondary) 70% */
+      white 70%
+    )
+}
+
+.nav-links {
+  gap: var(--nav-gap);
+}
+
+.logo > p {
+  padding-left: var(--nav-gap);
+  font-weight: var(--font-weight-large);
+  font-size: var(--font-size-medium);
+}
+
+.cv-wrapper > a:hover,
+.logo:hover
+{
+  cursor: pointer;
+}
+
+/* Hero */
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-large);
+  letter-spacing: 0.1px;
+  line-height: 1;
+  width: 50%;
+  margin: 80px auto;
+}
+
+main {
+  width: 100vw;
+  justify-content: center;
+  height: 100vh;
+}
+
+.welcome-section {
+  position: relative;
+  top: 100px;
+  height: 50%;
+}
+
+/* Projects */
+
+.project-info {
+  justify-content: space-around;
+}
+
+.project-title {
+  padding-left: var(--nav-gap);
+  font-weight: var(--font-weight-large);
+  font-size: var(--font-size-medium);
+}
+
+.projects {
+  margin-top: 50px;
+}
+
+.project-image-wrapper {
+  margin: var(--nav-gap) auto 0;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /
+}
+
+/* Media Queries */
+@media screen and (max-width: 990px) {
+  .welcome-section {
+    height: 100vh;
+  }
+
+  .logo > p {
+    padding-left: var(--nav-gap);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-regular);
+  }
+}
